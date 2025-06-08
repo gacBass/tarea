@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     let likeCounter = 0;
+    let agregarComentario = '';
+    let comentarioLabel;
     let meGusta = document.getElementById('meGusta');
     let likes = document.getElementById('likes');
     let reset = document.getElementById('reset');
@@ -8,6 +10,13 @@ document.addEventListener('DOMContentLoaded', () => {
     let div = document.getElementById('div');
     let display = document.getElementById('display');
     let showDiv = document.getElementById('show');
+    let comment = document.getElementById('comment');
+
+
+    //   nodes
+
+    let nodeShow = document.querySelector('button#show');
+    let nodeDisplay = document.querySelector('button#display');
 
 
 
@@ -58,18 +67,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
+
     function hide() {
-        div.style.display = 'none'
+        div.style.display = 'none';
+        nodeDisplay.disabled = true;
+        nodeShow.disabled = false;
+        display.style.cursor = 'not-allowed';
+        showDiv.style.cursor = '';
+
+
+
     }
 
     function show() {
-        div.style.display = ''
+        div.style.display = '';
+        nodeDisplay.disabled = false;
+        nodeShow.disabled = true;
+        showDiv.style.cursor = 'not-allowed';
+        display.style.cursor = '';
+
+
     }
+
+    function addComment() {
+        comentarioLabel = document.createElement('input');
+        c = document.createElement('button');
+        c.textContent = 'Agregar';
+        div.appendChild(comentarioLabel);
+        div.appendChild(c);
+        comment.style.display = 'none';
+    }
+
 
     reset.addEventListener('click', reseting);
     meGusta.addEventListener('click', color);
     display.addEventListener('click', hide);
     showDiv.addEventListener('click', show);
+    comment.addEventListener('click', addComment);
+
+
+
 
 
 
