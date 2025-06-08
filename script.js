@@ -6,6 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let reset = document.getElementById('reset');
     let body = document.getElementById('body');
     let div = document.getElementById('div');
+    let display = document.getElementById('display');
+    let showDiv = document.getElementById('show');
+
+
 
 
 
@@ -54,8 +58,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
+    function hide() {
+        div.style.display = 'none'
+    }
+
+    function show() {
+        div.style.display = ''
+    }
+
     reset.addEventListener('click', reseting);
     meGusta.addEventListener('click', color);
+    display.addEventListener('click', hide);
+    showDiv.addEventListener('click', show);
+
+
 
 
     loadLikes();
