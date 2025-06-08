@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     let likeCounter = 0;
-    let agregarComentario = '';
     let comentarioLabel;
+    let addCommentBtn;
     let meGusta = document.getElementById('meGusta');
     let likes = document.getElementById('likes');
     let reset = document.getElementById('reset');
@@ -89,13 +89,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
+    function alerta() {
+
+        alert("we are working on this part of the app, thanks in advance!");
+        comentarioLabel.remove();
+        addCommentBtn.remove();
+        comment.disabled = false;
+
+    }
+
     function addComment() {
         comentarioLabel = document.createElement('input');
-        c = document.createElement('button');
-        c.textContent = 'Agregar';
+        btn = document.createElement('button');
+        btn.textContent = 'Agregar';
+        btn.id = 'botonAddComment';
         div.appendChild(comentarioLabel);
-        div.appendChild(c);
-        comment.style.display = 'none';
+        div.appendChild(btn);
+        comment.disabled = true;
+        addCommentBtn = document.getElementById('botonAddComment');
+        addCommentBtn.addEventListener('click', alerta);
     }
 
 
@@ -104,9 +116,6 @@ document.addEventListener('DOMContentLoaded', () => {
     display.addEventListener('click', hide);
     showDiv.addEventListener('click', show);
     comment.addEventListener('click', addComment);
-
-
-
 
 
 
