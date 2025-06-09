@@ -2,6 +2,7 @@
   padding: 15px;
   text-align: center;
   color: rgb(54, 146, 222);
+  width: 50%;
 }
 
 #likes {
@@ -15,6 +16,7 @@
   text-align: center;
   color: rgb(44, 10, 48);
   text-decoration: underline;
+  width: 50%;
 }
 
 #display {
@@ -61,13 +63,13 @@ h3 {
 
 body {
   display: flex;
-  gap: 80px;
+  gap: 50px;
   flex-direction: column;
   padding: 50px;
   background-color: #3d1bcf99;
 }
 div {
-  padding: 150px;
+  padding: 50px;
   align-self: center;
   border: 3px solid rgb(12, 11, 11);
   background-color: aqua;
@@ -81,6 +83,10 @@ article {
 
 hr {
   color: white;
+}
+
+section {
+  display: flex;
 }
 
 .flip-horizontal-bottom {
