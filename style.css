@@ -29,6 +29,7 @@
   text-align: center;
   color: rgb(44, 10, 48);
   text-decoration: underline;
+  cursor: not-allowed;
 }
 
 #comment {
@@ -36,7 +37,6 @@
   text-align: center;
   color: rgb(44, 10, 48);
   text-decoration: underline;
-  
 }
 
 #counter {
@@ -44,7 +44,7 @@
   text-align: center;
   color: rgb(44, 10, 48);
   text-decoration: underline;
-  
+  cursor: not-allowed;
 }
 
 #totals {
@@ -52,9 +52,8 @@
   text-align: center;
   color: rgb(44, 10, 48);
   text-decoration: underline;
-  
+  cursor: not-allowed;
 }
-
 
 h3 {
   font-size: 30px;
@@ -76,8 +75,8 @@ div {
 
 article {
   display: flex;
-  position: fixed;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
 }
 
 hr {

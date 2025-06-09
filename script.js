@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let nodeDisplay = document.querySelector('button#display');
 
 
-    let sum = document.createElement('p');
+    let sum = document.createElement('span');
 
 
 
@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
         likes.textContent = likeCounter;
         saveLikes();
         counter.disabled = false;
+
 
     })
 
@@ -75,6 +76,8 @@ document.addEventListener('DOMContentLoaded', () => {
         meGusta.style.color = changeColor('55');
         body.style.backgroundColor = changeColor('22');
         div.style.backgroundColor = changeColor('77');
+        counter.style.cursor = 'revert';
+        totals.style.cursor = 'revert';
 
     }
 
@@ -85,6 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
         nodeShow.disabled = false;
         display.style.cursor = 'not-allowed';
         showDiv.style.cursor = '';
+        showDiv.style.cursor = 'revert';
 
 
 
@@ -130,6 +134,9 @@ document.addEventListener('DOMContentLoaded', () => {
         counter.style.backgroundColor = 'green';
         counterSumClick += 1;
         sum.textContent = counterSumClick;
+
+
+
 
         counter.appendChild(sum);
 
