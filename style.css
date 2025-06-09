@@ -18,14 +18,14 @@
 }
 
 #display {
-  padding: 15px;
+  padding: 10px;
   text-align: center;
   color: rgb(44, 10, 48);
   text-decoration: underline;
 }
 
 #show {
-  padding: 15px;
+  padding: 10px;
   text-align: center;
   color: rgb(44, 10, 48);
   text-decoration: underline;
@@ -40,7 +40,7 @@
 }
 
 #counter {
-  padding: 15px;
+  padding: 10px;
   text-align: center;
   color: rgb(44, 10, 48);
   text-decoration: underline;
