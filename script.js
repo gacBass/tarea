@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let comment = document.getElementById('comment');
     let counter = document.getElementById('counter');
     let totals = document.getElementById('totals');
-
+    let counterSumClick = 0;
     let counterOne = 0;
 
 
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let nodeDisplay = document.querySelector('button#display');
 
 
-
+    let sum = document.createElement('p');
 
 
 
@@ -62,13 +62,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
-    function color() {
+    function changeColor(colorNunber) {
 
         let num = Math.floor(Math.random() * (9999 - 1000 + 1)) + 1000;
-        reset.style.color = '#ff' + num;
-        meGusta.style.color = '#55' + num;
-        body.style.backgroundColor = '#22' + num;
-        div.style.backgroundColor = '#77' + num;
+        let color = '#' + colorNunber + num
+        return color;
+    }
+
+    function color() {
+
+        reset.style.color = changeColor('ff');
+        meGusta.style.color = changeColor('55');
+        body.style.backgroundColor = changeColor('22');
+        div.style.backgroundColor = changeColor('77');
 
     }
 
@@ -121,6 +127,11 @@ document.addEventListener('DOMContentLoaded', () => {
         likeCounter = 0;
         likes.textContent = 0;
         totals.disabled = false;
+        counter.style.backgroundColor = 'green';
+        counterSumClick += 1;
+        sum.textContent = counterSumClick;
+
+        counter.appendChild(sum);
 
 
     }
