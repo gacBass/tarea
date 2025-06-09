@@ -11,6 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
     let display = document.getElementById('display');
     let showDiv = document.getElementById('show');
     let comment = document.getElementById('comment');
+    let counter = document.getElementById('counter');
+    let totals = document.getElementById('totals');
+
+    let counterOne = 0;
+
 
 
     //   nodes
@@ -26,7 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function loadLikes() {
 
         let storage = localStorage.getItem('myLikeCount');
-        console.log(storage);
         if (storage !== null) {
             likeCounter = parseInt(storage);
             likes.textContent = likeCounter;
@@ -44,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
         likeCounter += 1;
         likes.textContent = likeCounter;
         saveLikes();
+        counter.disabled = false;
 
     })
 
@@ -110,12 +115,31 @@ document.addEventListener('DOMContentLoaded', () => {
         addCommentBtn.addEventListener('click', alerta);
     }
 
+    function count() {
+
+        counterOne += likeCounter;
+        likeCounter = 0;
+        likes.textContent = 0;
+        totals.disabled = false;
+
+
+    }
+
+    function total() {
+
+        likes.textContent = counterOne;
+
+
+
+    }
 
     reset.addEventListener('click', reseting);
     meGusta.addEventListener('click', color);
     display.addEventListener('click', hide);
     showDiv.addEventListener('click', show);
     comment.addEventListener('click', addComment);
+    counter.addEventListener('click', count);
+    totals.addEventListener('click', total);
 
 
 
